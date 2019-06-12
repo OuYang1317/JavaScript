@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			div{
+				width: 50px;
+				height: 50px;
+				position: absolute;
+				left: 0;
+				top: 0;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="box">
+			<img src="img/5.png"width="50"/>
+		</div>
+		<div id="box1">
+			<img src="img/5.png"width="50"/>
+		</div>
+		<div id="box2">
+			<img src="img/5.png"width="50"/>
+		</div>
+		<div id="box1">
+			<img src="img/5.png"width="50"/>
+		</div>
+		<div id="box2">
+			<img src="img/5.png"width="50"/>
+		</div>
+		<div id="box1">
+			<img src="img/5.png"width="50"/>
+		</div>
+		<div id="box2">
+			<img src="img/5.png"width="50"/>
+		</div>
+		<div id="box1">
+			<img src="img/5.png"width="50"/>
+		</div>
+		<input type="button" name="" id="btn" value="样式一" />
+		<input type="button" name="" id="btn1" value="样式二" />
+		<input type="button" name="" id="btn2" value="样式三" />
+		<input type="button" name="" id="btn3" value="样式四" />
+		<input type="button" name="" id="btn4" value="样式五" />
+	</body>
+		<script type="text/javascript">
+			
+			var oBox = document.getElementsByTagName("div")
+			console.log(oBox.length)
+			 document.onmousemove=function(e){
+			 		var evt = e || Event
+			 		var x1 =evt.clientX+5
+			 		var y1 =evt.clientY+5
+			 		for(var i = oBox.length-1;i>0;i--){
+						oBox[i].style.left = oBox[i-1].style.left
+						oBox[i].style.top = oBox[i-1].style.top
+			 	}
+			 		oBox[0].style.left = x1+"px"
+			 		oBox[0].style.top =y1+"px"
+			 }
+			 btn.onclick=function(){
+			 	var Imgitem =document.getElementsByTagName("img")
+			 	for(var i = 0;i<Imgitem.length;i++){
+			 		Imgitem[i].src="img/1.png"
+			 	}
+			 }
+			  btn1.onclick=function(){
+			 	var Imgitem =document.getElementsByTagName("img")
+			 	for(var i = 0;i<Imgitem.length;i++){
+			 		Imgitem[i].src="img/25.png"
+			 	}
+			 }
+			   btn2.onclick=function(){
+			 	var Imgitem =document.getElementsByTagName("img")
+			 	for(var i = 0;i<Imgitem.length;i++){
+			 		Imgitem[i].src="img/8.png"
+			 	}
+			 }
+			    btn3.onclick=function(){
+			 	var Imgitem =document.getElementsByTagName("img")
+			 	for(var i = 0;i<Imgitem.length;i++){
+			 		Imgitem[i].src="img/4.png"
+			 	}
+			 }
+			     btn4.onclick=function(){
+			 	var Imgitem =document.getElementsByTagName("img")
+			 	for(var i = 0;i<Imgitem.length;i++){
+			 		Imgitem[i].src="img/14.png"
+			 	}
+			 }
+		</script>
+</html>
